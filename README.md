@@ -4,9 +4,9 @@ To implement the semi-static/dynamic sidebar and playlist component for the Soun
 
 ## Related Projects
 
-https://github.com/4-ever-young/soundclout-active-player-module.git
-https://github.com/4-ever-young/soundclout-info-comments-module.git
-https://github.com/4-ever-young/soundclout-active-display-module
+ - https://github.com/4-ever-young/soundclout-active-player-module.git
+ - https://github.com/4-ever-young/soundclout-info-comments-module.git
+ - https://github.com/4-ever-young/soundclout-active-display-module
 
 ### Usage
 
@@ -23,5 +23,7 @@ site map
  - etc.
  
 ### Development
+```ah
   npm install -g webpack
   npm install
+```
