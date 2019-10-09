@@ -10,11 +10,11 @@ To implement the semi-static/dynamic sidebar and playlist component for the Soun
 
 ### Usage
 
-display images/information for tracks in the album
-display images/information for tracks in playlist
-display images of account profiles that like the playlist, with a pop-up that includes their information
-display profiles that have reposted the song
-site map
+ - display images/information for tracks in the album
+ - display images/information for tracks in playlist
+ - display images of account profiles that like the playlist, with a pop-up that includes their information
+ - display profiles that have reposted the song
+ - site map
 
 ### Requirements
 
