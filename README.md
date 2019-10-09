@@ -16,12 +16,12 @@ display images of account profiles that like the playlist, with a pop-up that in
 display profiles that have reposted the song
 site map
 
-#### Requirements
+### Requirements
 
  - Node 8.15.0
  - Nvm 6.4.1
  - etc.
  
-##### Development
+### Development
   npm install -g webpack
   npm install
