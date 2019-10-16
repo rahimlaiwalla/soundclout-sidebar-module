@@ -1,0 +1,142 @@
+.likeBlock {
+    display: block;
+    width: 300px;
+    height: 96px;
+    /* border: 2px solid black; */
+    margin-bottom: 20px;
+}
+.header {
+    width: 300px;
+    height:31px;
+    border-bottom: 1px solid #f2f2f2
+
+}
+
+.likeHeader {
+    cursor: pointer;
+}
+
+.likeNumber{
+    line-height: 24px;
+
+    color: #999;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 13px
+    
+}
+
+.viewAllLikes {
+    float: right;
+    line-height: 24px;
+    font-weight: 100;
+    color: #999;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 13px
+}
+
+.viewAllLikes:hover {
+    color: black;
+}
+
+
+.likeContainer {
+    display: block;
+    width:300px;
+    height:65px;
+    /* padding-top: 31px; */
+}
+
+.profilePicture {
+    list-style: none;
+    padding-left: 9px;
+    padding-top: 5px;
+    /* padding-right: 10px; */
+    
+    width: 290px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pppics {
+    display: inline;
+
+    margin-left: -12px;
+    position: relative;
+    border: 2px solid white;
+
+}
+.roundImage {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    /*account for border in pixel size to keep image true at 40px*/
+    box-sizing: border-box;
+
+    /* background-origin: border-box; */
+
+}
+
+.followHover {
+    
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.followButton {
+    cursor: pointer;
+    text-decoration-color: black;
+    height: 22px;
+    border-radius: 5px;
+    
+}
+
+.followerName {
+    color: #505050;
+    padding-bottom: 3px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 13px;
+
+}
+
+.followerName:hover {
+    color: black;
+}
+
+.followerNumber {
+    display: block;
+    color: #999;
+    padding-bottom: 3px;
+    /* width: 5px;
+    height: 5px; */
+}
+
+.followerNumber:hover {
+    color: black;
+}
+
+.card {
+  box-sizing: border-box;
+  height: 170px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  
+
+
+}
+
+.heart {
+    height: 14px;
+    padding-right: 5px;
+}
+
+.heartLikeBundle {
+    min-height: 24px;
+}
