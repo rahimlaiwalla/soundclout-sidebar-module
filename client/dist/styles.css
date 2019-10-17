@@ -1,3 +1,78 @@
+/*related tracks block*/
+
+.relatedTracksBlock {
+    width: 300px;
+    height: 255.56px;
+}
+
+.iconWords {
+    float: left;
+    width: 114.67px;
+    height: 24px;
+    margin-top: 3px;
+}
+
+.trackIcon {
+    float: left;
+    width: 21px;
+    height: 24px;
+    padding-right: 2px;
+}
+
+.waveformImage {
+    width: 16px;
+    height: 16px;
+    padding-top: 3px;
+}
+
+.relatedTracksWritten {
+    width: 89.67px;
+    height: 24px;
+    float: left;
+    font-size: 13px;
+    padding-top: 3px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: #999;
+
+}
+
+.tracksViewall {
+    float: right;
+    width: 48.41px;
+    height: 18px;
+    font-size: 13px;
+    margin-top: 6px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: #999;
+
+}
+
+.relatedTracksContainerWithPad {
+    width: 300px;
+    height: 224.56px;
+    padding-top: 5px;
+}
+
+.relatedTracksContainer {
+    width: 300px;
+    height: 219.56px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.singleTrackContainer {
+    width: 300px;
+    height: 73.19px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.singleTrackInformation {
+    width: 300px;
+    height: 63.19px;
+}
+
+/*like block*/
 .likeBlock {
     display: block;
     width: 300px;
@@ -134,7 +209,9 @@
 
 .heart {
     height: 14px;
-    padding-right: 5px;
+    padding-right: 1px;
+    padding-bottom: 2px;
+    margin-top: 2px;
 }
 
 .heartLikeBundle {

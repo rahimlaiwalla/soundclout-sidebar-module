@@ -57,11 +57,33 @@ class App extends React.Component {
 
     render () {
         return (
-            <article className='likeBlock'>
+            <div>
+            <div className='relatedTracksBlock'>
+                <div className='header'>
+                    <div className='iconWords'>
+                        <div className='trackIcon' ><img className='waveformImage' src='/images/waveform.png' /></div>
+                        <div className='relatedTracksWritten'>{'Related tracks'}</div>
+                    </div>
+                    <div className='tracksViewall'>{'View all'}</div>
+                </div>
+                <div className='relatedTracksContainerWithPad'>
+                    <div className='relatedTracksContainer'>
+                        <ul className='relatedTracksContainer uLRelatedTracks'>
+                            <li className='singleTrackContainer'>
+                                <div className='singleTrackInformation'>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div className='likeBlock'>
                 <div className='header' >
                     <div onClick={this.onClickLikes} className='likeHeader'>
                         <span className='heartLikeBundle'>
-                            <span className='heart'><img src='/images/heart.jpeg'></img></span>
+                            <span className='heart'><img src='/images/heart.png'></img></span>
                             <span className='likeNumber'>{`${this.state.likes} ${this.state.likeWord}`}</span>
                         </span>
                         <span className='likeHeader viewAllLikes'>{'View all'}</span>
@@ -76,7 +98,8 @@ class App extends React.Component {
                         </ul>
                     </div> 
                 </div>
-            </article>
+            </div>
+            </div>
         )
     }
 }
