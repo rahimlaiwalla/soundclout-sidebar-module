@@ -11,7 +11,7 @@ app.use(bodyparser());
 app.use(express.static('/Users/rahimlaiwalla/Hack Reactor/soundclout-sidebar-module/client/dist'));
 
 app.get('/userinfo', (req, res) => {
-    db.query('select user_picture_url, username, followers from username_info', (err, data) => {
+    db.query('select user_picture_url, username, followers, username_id from username_info', (err, data) => {
         if(err){
             console.log('error: USERINFO NOT SELECTED')
         } else{
@@ -28,6 +28,7 @@ app.get('/songinfo', (req, res) => {
         if(err){
             console.log('error')
         }else{
+            console.log('/SONGINFO SELECTED FROM DB')
             res.send(data)
         }
     })
@@ -40,6 +41,19 @@ app.get('/likes', (req, res) => {
         } else{
             // console.log('songid data', data)
             res.send(data)
+        }
+    })
+})
+
+app.post('/likePost', (req, res) => {
+    // console.log('REQ.BODY', req.body)
+
+    db.query(`insert into song_likes (song_id, username_id) values (${req.body.songId}, ${req.body.usernameId})`, (err, data) => {
+        if(err){
+            console.log(err)
+        }else {
+            console.log('LIKE INSERTED INTO DB')
+            res.send('done')
         }
     })
 })

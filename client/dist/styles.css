@@ -2,7 +2,10 @@
 
 .relatedTracksBlock {
     width: 300px;
-    height: 255.56px;
+    height: 255.58px;
+    margin-bottom:30px;
+
+
 }
 
 .iconWords {
@@ -20,9 +23,11 @@
 }
 
 .waveformImage {
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 18px;
     padding-top: 3px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
 }
 
 .relatedTracksWritten {
@@ -31,7 +36,7 @@
     float: left;
     font-size: 13px;
     padding-top: 3px;
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate", "Lucida Grande","Lucida Sans Unicode";
     color: #999;
 
 }
@@ -42,9 +47,13 @@
     height: 18px;
     font-size: 13px;
     margin-top: 6px;
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
     color: #999;
 
+}
+
+.header:hover .tracksViewall {
+    color: black;
 }
 
 .relatedTracksContainerWithPad {
@@ -55,7 +64,7 @@
 
 .relatedTracksContainer {
     width: 300px;
-    height: 219.56px;
+    height: 219.58px;
     padding: 0px;
     margin: 0px;
 }
@@ -65,12 +74,253 @@
     height: 73.19px;
     padding-top: 5px;
     padding-bottom: 5px;
+    box-sizing: border-box;
 }
 
 .singleTrackInformation {
     width: 300px;
     height: 63.19px;
 }
+
+.relatedTrackPicHolder {
+    display: block;
+    width: 55px;
+    height: 60px;
+    border-right: 1px;
+    padding-top: 5px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.rtImageBox {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.rtImageOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+
+}
+
+.singleTrackContainer:hover .rtImageOverlay {
+    opacity: 1;
+}
+
+.trackArtistSongInfo {
+    width: 240px;
+    height: 59.19px;
+    float: right;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.relatedArtistNameBox {
+    display: block;
+    width: 235px;
+    height: 18px;
+    box-sizing: border-box;
+}
+.relatedArtistName {
+    display: block;
+    width: 46px;
+    height: 16px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
+    font-size: 14px;
+    color: #999;
+}
+
+.relatedSongNameBox {
+    display: block;
+    position: relative;
+    width: 235px;
+    height: 18px;
+    box-sizing: border-box;
+}
+
+.relatedSongName {
+    display: inline-block;
+    width: 200px;
+    height: 15px;
+    font-size: 14px;
+    margin-right: 0px;
+    box-sizing: border-box;
+    color: #505050;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
+
+}
+
+.relatedMenuOptions {
+    position: absolute;
+    display: block;
+    top: -8px;
+    left: 170px;
+    width: 60px;
+    height: 25px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.singleTrackContainer:hover .relatedMenuOptions {
+    opacity: 1;
+}
+
+.likeRelatedSong {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 23px;
+    border: 1px solid#F0F0F0;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
+    box-sizing: border-box;
+}
+
+.relatedDropDownMenu {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 23px;
+    margin-top: 2px;
+    border: 1px solid #F0F0F0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.likeRelatedSongBlackHeart{
+    position: relative;
+    top: 3px;
+    left: 5.45px;
+    
+}
+
+.menuRelatedSongImage {
+    position: relative;
+    top: 3px;
+    left: 4.3px;
+}
+
+
+.dropDownMenu {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 25;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.relatedTrackIconList {
+    width: 240px;
+    height: 22px;
+    padding: 0px;
+    margin-bottom: 1px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.relatedlist {
+    font-size: 14px;
+    width: 56px;
+    height: 22px;
+    display: inline-block
+
+}
+
+.relatedPlayContainer {
+    display: block;
+    width: 48px;
+    height: 13px;
+    margin-top: 2px;
+}
+
+.relatedPlayIcon {
+    float:left;
+    width: 16px;
+    height: 12px;
+}
+
+.relatedTimesPlayed {
+    float:right;
+    width: 30px;
+    height: 12px;
+}
+
+.relatedPlayContainerInserts {
+    font-size: 12px;
+    color: #999;
+    width: 30px;
+    height: 12px;
+    padding-top: 1px;
+    box-sizing: border-box;
+}
+
+
+.relatedLikesContainer {
+    display: block;
+    width: 48px;
+    height: 13px;
+    margin-top: 3px;
+}
+
+.relatedLikesIcon {
+    float:left;
+    width: 16px;
+    height: 12px;
+}
+
+.relatedLikes {
+    float:right;
+    width: 30px;
+    height: 12px;
+}
+
+
+.relatedRepostsContainer {
+    display: block;
+    width: 48px;
+    height: 13px;
+    margin-top: 2px;
+}
+
+.relatedRepostsIcon {
+    float:left;
+    width: 16px;
+    height: 12px;
+}
+
+.relatedReposts {
+    float:right;
+    width: 30px;
+    height: 12px;
+}
+
+.relatedcommentsContainer {
+    display: block;
+    width: 48px;
+    height: 13px;
+    margin-top: 2px;
+}
+
+.relatedCommentsIcon {
+    float:left;
+    width: 16px;
+    height: 12px;
+}
+
+.relatedComments {
+    float:right;
+    width: 30px;
+    height: 12px;
+}
+
 
 /*like block*/
 .likeBlock {
@@ -95,7 +345,7 @@
     line-height: 24px;
 
     color: #999;
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
     font-size: 13px
     
 }
@@ -105,11 +355,11 @@
     line-height: 24px;
     font-weight: 100;
     color: #999;
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
     font-size: 13px
 }
 
-.viewAllLikes:hover {
+.likeHeader:hover .viewAllLikes {
     color: black;
 }
 
@@ -175,7 +425,7 @@
 .followerName {
     color: #505050;
     padding-bottom: 3px;
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode";
     font-size: 13px;
 
 }

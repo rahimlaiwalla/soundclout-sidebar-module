@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Namelist from './Namelist.jsx';
+import RelatedTracks from './RelatedTracks.jsx';
 
 class App extends React.Component {
     constructor(props){
@@ -9,11 +10,13 @@ class App extends React.Component {
             userPictures: [],
             likes: 0,
             likeWord: 'likes',
+            songInformation: []
 
 
         }
         this.onClickLikes = this.onClickLikes.bind(this);
         this.onClickProfiles = this.onClickProfiles.bind(this);
+        this.countRelatedTracksLikes = this.countRelatedTracksLikes.bind(this);
 
     }
 
@@ -25,26 +28,75 @@ class App extends React.Component {
                     array.push(data.data[i])
                 }
                 this.setState({userPictures: array}, () =>{
-                    console.log(this.state.userPictures)
+                    // console.log(this.state.userPictures)
                 })
                 
             })
 
-        axios.get('/likes')
-            .then ( (data) => {
-                var count = 0
-                data.data.forEach( (songObj) => {
-                    if(songObj.song_id === 1){
-                        count++
-                    }
+            axios.get('/songinfo')
+                .then( (data) => {
+                    var array = [];
+                    data.data.forEach( (songInfoObj) => {
+                        if(songInfoObj.category === 'Hip-Hop'){
+                            array.push(songInfoObj)
+                        }
+                    })
+                    this.setState({songInformation: array}, () => {
+                        // console.log('STATE SONG INFO: ', this.state.songInformation)
+                    })
                 })
-                this.setState({likes: count})
-                if(count === 1) {
-                    this.setState({likeWord: 'like'})
-                }
-                console.log(this.state.likes)
-            })
+                .then(axios.get('/likes')
+                    .then ( (data) => {
+                        var count = 0
+                        data.data.forEach( (songObj) => {
+                            if(songObj.song_id === 1){
+                                count++
+                            }
+                        })
+                        this.setState({likes: count})
+                        if(count === 1) {
+                            this.setState({likeWord: 'like'})
+                        }
+                        // console.log(this.state.likes)
+                        
+                        var stateSongInfo = this.state.songInformation;
+                        stateSongInfo.forEach( (songInfoObj) => {
+                            this.countRelatedTracksLikes(data, songInfoObj)
+                        })
+                        this.setState({songInformation: stateSongInfo}, () => {
+
+                            console.log('This.state.songInfomation: ', this.state.songInformation)
+                        })
+                    }))
+                    .then(axios.get('/userinfo')
+                        .then( (data) => {
+                            console.log('USERINFO: ', data.data)
+                            var stateSongInfo = this.state.songInformation
+                            stateSongInfo.forEach( (songObj) => {
+                                data.data.forEach( (dataObj) =>{
+                                    if(songObj.username_id === dataObj.username_id){
+                                        songObj.username = dataObj.username
+                                    }
+                                })
+                            })
+                            console.log('STATE SONGINFO: ', stateSongInfo)
+                            this.setState({songInformation: stateSongInfo})
+                        })
+                    )
+        
+
     };
+
+
+    countRelatedTracksLikes (data, songInfoObj) {
+        var count = 0
+        data.data.forEach( (songObj) => {
+            if(songObj.song_id === songInfoObj.song_id){
+                count++
+            }
+        })
+        songInfoObj['likes'] = count;
+    }
 
     onClickLikes () {
         alert('View all likes has been clicked')
@@ -69,11 +121,12 @@ class App extends React.Component {
                 <div className='relatedTracksContainerWithPad'>
                     <div className='relatedTracksContainer'>
                         <ul className='relatedTracksContainer uLRelatedTracks'>
-                            <li className='singleTrackContainer'>
-                                <div className='singleTrackInformation'>
-
-                                </div>
-                            </li>
+                            {this.state.songInformation.map( (songInformationObj) => {
+                                return(
+                                <RelatedTracks song={songInformationObj} />
+                                )
+                            })
+                            }
                         </ul>
                     </div>
 
