@@ -11,7 +11,7 @@ app.use(bodyparser());
 app.use(express.static('/Users/rahimlaiwalla/Hack Reactor/soundclout-sidebar-module/client/dist'));
 
 app.get('/userinfo', (req, res) => {
-    db.query('select user_picture_url, username, followers, username_id from username_info', (err, data) => {
+    db.query('select user_picture_url, username, followers, username_id, user_location from username_info', (err, data) => {
         if(err){
             console.log('error: USERINFO NOT SELECTED')
         } else{
@@ -40,6 +40,16 @@ app.get('/likes', (req, res) => {
             console.log('error')
         } else{
             // console.log('songid data', data)
+            res.send(data)
+        }
+    })
+})
+
+app.get('/solouser', (req, res) => {
+    db.query('select * from username_info', (err, data) => {
+        if(err){
+            console.log('error solo user')
+        } else{
             res.send(data)
         }
     })
