@@ -26,7 +26,7 @@ app.get('/userinfo', (req, res) => {
 app.get('/songinfo', (req, res) => {
     db.query('select * from song_info', (err, data) => {
         if(err){
-            console.log('error')
+            console.log('/SONGINFO NOT SELECTED')
         }else{
             console.log('/SONGINFO SELECTED FROM DB')
             res.send(data)

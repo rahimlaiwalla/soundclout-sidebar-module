@@ -109,15 +109,33 @@
 
 .rtImageOverlay {
     position: absolute;
+    pointer-events: none;
     top: 10px;
     left: 10px;
     opacity: 0;
 
 }
 
+.rtPauseImageOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+}
+
 .singleTrackContainer:hover .rtImageOverlay {
     opacity: 0.4;
 }
+
+/* .singleTrackContainer:active .rtImageOverlay {
+
+    opacity: 0;
+}
+
+.singleTrackContainer:active .rtPauseImageOverlay {
+
+    opacity: 0.4;
+} */
 
 .trackArtistSongInfo {
     width: 240px;

@@ -10,12 +10,22 @@ class RelatedTracks extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            songInformation: props.song
+            songInformation: props.song,
+            playImage: false
         }
 
     this.postLike = this.postLike.bind(this);
+    this.clickChangePlayImage = this.clickChangePlayImage.bind(this)
     }
 
+
+    clickChangePlayImage () {
+        if(this.state.playImage === false){
+            this.setState({playImage: true})
+        } else {
+            this.setState({playImage: false})
+        }
+    }
 
     postLike (songId, usernameId, likes) {
             var value = {songId, usernameId, likes};
@@ -41,9 +51,16 @@ class RelatedTracks extends React.Component {
             <li className='singleTrackContainer'>
                 <div className='singleTrackInformation'>
                     <span className='relatedTrackPicHolder'>
-                        <span className='rtImageBox'>
+                        <span className='rtImageBox' onClick={this.clickChangePlayImage}>
                             <img className='rtImage' src={this.state.songInformation.song_picture_url} height="50px" width="50px" />
-                            <img className='rtImageOverlay' src='/images/playoverlay.png' heigth='30px' width='30px' />
+                            { !this.state.playImage
+                            ? (<img className='rtImageOverlay' src='/images/playoverlay.png' heigth='30px' width='30px' />
+                            )
+                            :
+                            (
+                                <img className='rtImageOverlay' src='/images/pauseOverlay.png' heigth='30px' width='30px' />
+                            )
+                            } 
                         </span>
                     </span>
                     <span className='trackArtistSongInfo'>
