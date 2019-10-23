@@ -1,6 +1,7 @@
 const express  = require('express');
 const bodyparser = require('body-parser');
 const db = require('../database/index.js');
+const cors = require('cors');
 
 const PORT = 3131;
 
@@ -8,7 +9,9 @@ var app = express();
 
 app.use(bodyparser());
 
-app.use(express.static('/Users/rahimlaiwalla/Hack Reactor/soundclout-sidebar-module/client/dist'));
+app.use(express.static(__dirname + '/../client/dist'));
+
+app.use(cors());
 
 app.get('/userinfo', (req, res) => {
     db.query('select user_picture_url, username, followers, username_id, user_location from username_info', (err, data) => {

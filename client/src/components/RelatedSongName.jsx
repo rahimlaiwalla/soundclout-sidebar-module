@@ -51,7 +51,7 @@ class RelatedSongName extends React.Component {
                             <div>
                                 <div className='notch' ></div>
                                 <div className='relatedNameIconHover'>
-                                    <img className= 'roundImage followHover' src={this.state.usernameInfo.user_picture_url} height="70px" width="70px" />
+                                    <img className= 'roundImage followHover' src={'http://localhost:3131/' + this.state.usernameInfo.user_picture_url} height="70px" width="70px" />
                                     <div className='cardName'>
                                         <div className='followerName relatedFollowerName'  >{this.state.usernameInfo.username}</div>
                                         <span className='followerNumber'>
