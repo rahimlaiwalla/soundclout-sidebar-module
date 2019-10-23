@@ -9,9 +9,10 @@ var app = express();
 
 app.use(bodyparser());
 
+app.use(cors());
+
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.use(cors());
 
 app.get('/userinfo', (req, res) => {
     db.query('select user_picture_url, username, followers, username_id, user_location from username_info', (err, data) => {
