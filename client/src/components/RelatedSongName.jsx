@@ -25,7 +25,7 @@ class RelatedSongName extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('/soloUser')
+        axios.get('http://localhost:3131/soloUser')
             .then((data) => {
                 console.log(data.data)
                 data.data.forEach( (obj) => {
