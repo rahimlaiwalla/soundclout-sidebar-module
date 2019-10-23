@@ -23,7 +23,8 @@ To implement the semi-static/dynamic sidebar and playlist component for the Soun
  - etc.
  
 ### Development
-```ah
-  npm install -g webpack
-  npm install
-```
+  - To start: 
+    - npm install
+    -To seed the data into the database, in terminal, run:
+      - mysql -u - root <schema.sql
+      - npm run seed-database
