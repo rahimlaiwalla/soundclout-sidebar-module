@@ -16,9 +16,9 @@ app.use(cors());
 app.get('/userinfo', (req, res) => {
     db.query('select user_picture_url, username, followers, username_id, user_location from username_info', (err, data) => {
         if(err){
-            console.log('error: USERINFO NOT SELECTED')
+            console.log('error: USERINFO NOT SELECTED', err)
         } else{
-            console.log('/USERINFO SELECTED FROM DB')
+            console.log('/USERINFO SELECTED FROM DB')//
             res.send(data)
         }
     })
@@ -29,7 +29,8 @@ app.get('/userinfo', (req, res) => {
 app.get('/songinfo', (req, res) => {
     db.query('select * from song_info', (err, data) => {
         if(err){
-            console.log('/SONGINFO NOT SELECTED')
+            console.log('/SONGINFO NOT SELECTED: ', err);
+            res.send('not found')
         }else{
             console.log('/SONGINFO SELECTED FROM DB')
             res.send(data)

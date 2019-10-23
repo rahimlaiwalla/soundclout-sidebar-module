@@ -7,7 +7,11 @@ var connection = mysql.createConnection({
     database: 'soundclout'
 })
 
-connection.connect( () => {
+connection.connect( (err) => {
+    if (err) {
+        console.log('DATABASE IS NOT CONNECTED: ', err);
+        return;
+    }
     console.log('database is connected')
 });
 

@@ -6,7 +6,7 @@ var usernameIdData = [
         username_id: 1,
         username: 'Rahim',
         followers: 30,
-        user_picture_url: 'www.rahim.com',
+        user_picture_url: '/images/1.jpeg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -14,7 +14,7 @@ var usernameIdData = [
         username_id: 2,
         username: 'Lily',
         followers: 30,
-        user_picture_url: 'www.lily.com',
+        user_picture_url: '/images/2.jpeg',
         user_location: 'San Francisco',
         pro_account: 'true'
     },
@@ -22,7 +22,7 @@ var usernameIdData = [
         username_id: 3,
         username: 'David',
         followers: 30,
-        user_picture_url: 'www.david.com',
+        user_picture_url: '/images/3.jpeg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -30,7 +30,7 @@ var usernameIdData = [
         username_id: 4,
         username: 'Aruna',
         followers: 30,
-        user_picture_url: 'www.aruna.com',
+        user_picture_url: '/images/4.jpeg',
         user_location: 'San Francisco',
         pro_account: 'true'
     },
@@ -38,7 +38,7 @@ var usernameIdData = [
         username_id: 5,
         username: 'Peeja',
         followers: 30,
-        user_picture_url: 'www.peeja.com',
+        user_picture_url: '/images/5.jpeg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -46,7 +46,7 @@ var usernameIdData = [
         username_id: 6,
         username: 'Candy',
         followers: 30,
-        user_picture_url: 'www.candy.com',
+        user_picture_url: '/images/6.jpg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -54,7 +54,7 @@ var usernameIdData = [
         username_id: 7,
         username: 'Faith',
         followers: 30,
-        user_picture_url: 'www.faith.com',
+        user_picture_url: '/images/7.jpg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -62,7 +62,7 @@ var usernameIdData = [
         username_id: 8,
         username: 'Pri',
         followers: 32,
-        user_picture_url: 'www.pri.com',
+        user_picture_url: '/images/8.jpg ',
         user_location: 'San Francisco',
         pro_account: 'true'
     },
@@ -70,7 +70,7 @@ var usernameIdData = [
         username_id: 9,
         username: 'Jennie',
         followers: 32,
-        user_picture_url: 'www.jennie.com',
+        user_picture_url: '/images/9.jpg',
         user_location: 'San Francisco',
         pro_account: 'false'
     },
@@ -78,7 +78,7 @@ var usernameIdData = [
         username_id: 10,
         username: 'Maia',
         followers: 32,
-        user_picture_url: 'www.maia.com',
+        user_picture_url: '/images/10.jpg',
         user_location: 'San Francisco',
         pro_account: 'true'
     }
@@ -93,7 +93,7 @@ var songInfoDb = [
         reposts: 100,
         comments: 100,
         category: 'Hip-Hop',
-        song_picture_url: 'www.rahimthedream.com'
+        song_picture_url: '/images/1.jpeg'
     },
     {
         song_id: 2,
@@ -133,7 +133,7 @@ var songInfoDb = [
         reposts: 1000,
         comments: 1000,
         category: 'Hip-Hop',
-        song_picture_url: 'www.peejathemainman.com'
+        song_picture_url: '/images/2.jpeg'
     },
     {
         song_id: 6,
@@ -172,8 +172,8 @@ var songInfoDb = [
         times_played: 750,
         reposts: 750,
         comments: 750,
-        category: 'K-Pop',
-        song_picture_url: 'www.jenniethestern.com'
+        category: 'Hip-Hop',
+        song_picture_url: '/images/3.jpeg'
     },
     {
         song_id: 10,
