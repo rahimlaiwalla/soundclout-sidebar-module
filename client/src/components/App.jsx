@@ -21,7 +21,7 @@ class App extends React.Component {
     }
 
     componentDidMount () {
-        axios.get('/userinfo')
+        axios.get('http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/userinfo')
             .then( (data) => {
                 var array = [];
                 for(var i = 0; i<=8; i++){
@@ -33,7 +33,7 @@ class App extends React.Component {
                 
             })
 
-            axios.get('/songinfo')
+            axios.get('http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/songinfo')
                 .then( (data) => {
                     var array = [];
                     data.data.forEach( (songInfoObj) => {
@@ -45,7 +45,7 @@ class App extends React.Component {
                     //     console.log('STATE SONG INFO: ', this.state.songInformation)
                     // })
 
-                    axios.get('/likes')
+                    axios.get('http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/likes')
                         .then ( (data) => {
                             var count = 0
                             data.data.forEach( (songObj) => {
@@ -65,7 +65,7 @@ class App extends React.Component {
                                 this.countRelatedTracksLikes(data, songInfoObj)
                             })
                             
-                            axios.get('/userinfo')
+                            axios.get('http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/userinfo')
                                 .then( (data) => {
                                     console.log('USERINFO: ', data.data)
                                     stateSongInfo.forEach( (songObj) => {
